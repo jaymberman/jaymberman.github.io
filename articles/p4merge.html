@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/article.css">
+    <title>P4Merge Setup</title>
+</head>
+<body>
+    <div>
+        From the <a href="https://www.perforce.com/downloads/visual-merge-tool">Perforce website</a> download the correct software
+        for your platform. It will ask you to register but you should be able to skip registration and download. If you can't do this, make an
+        account (you shouldn't need credit card info). The file should come down as <code>pv4.tgz</code>. Unpack the file with the
+        following command <code>tar zxvf /path/to/p4v.tgz</code>, which should create a directory called <code>p4v-&#60;timestamp&#62;</code> in
+        the same directory as the .tgz file. Go ahead and <code>cd</code> into the directory and type <code>sudo mkdir /opt/p4v</code>
+        followed by <code>sudo mv * /opt/p4v</code>. Finally type <code>sudo ln -s /opt/p4v/bin/p4merge /usr/local/bin/p4merge</code> to create
+        a symbolic link from the binary executables directory in your path, to the executable p4merge file. You are all done installing p4merge. Yay.
+        <br><br>
+        To set p4merge as the default diff/merge tool for git, open the git config file by typing <code>nano /path/to/.gitconfig</code>
+        (usually <code>nano ~/.gitconfig</code>), and simply add the following lines exactly to the file: <br>
+
+        <blockquote>
+            [merge] <br>
+            &emsp; tool=p4merge <br>
+            [diff] <br>
+            &emsp; tool=p4merge <br>
+            [mergetool "p4merge"] <br>
+            &emsp; path=/usr/local/bin/p4merge <br>
+            [difftool "p4merge"] <br>
+            &emsp; path=/usr/local/bin/p4merge <br>
+        </blockquote>
+        <br>
+        Optionally add the following lines, which suppress in my opinion annoying prompts, and prevents unnecessary directory size proliferation: <br>
+        <blockquote>
+            [mergetool] <br>
+            &emsp; prompt=false <br>
+            &emsp; keepBackup=false <br>
+            [difftool] <br>
+            &emsp; prompt=false <br>
+        </blockquote> <br>
+
+        Test it out in a git managed project by making some changes and then compare the changes to the previous commit by typing
+         <code>git difftool HEAD</code>
+    </div>
+</body>
+</html>

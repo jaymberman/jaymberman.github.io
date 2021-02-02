@@ -1,0 +1,54 @@
+/* class selector */
+.how-to {
+    background: rgba(230, 221, 110, 0.7);
+    border: 3px solid #73A4F0;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  /* id selector
+  #lastname {
+      color: rgb(40, 216, 40);
+  } */
+
+  /* attribute selector
+  a[href="#"] {
+    color: rgb(40, 216, 40);
+  } */
+
+  /* pseudoclass or "effect" selector */
+  a[href="#"]:hover {
+    color: rgb(200, 42, 221);
+  }
+
+  /* descended or "nested" selector (of element) inside the how-to class (specific to div) */
+  div.how-to h1 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  div.how-to p {
+    font-size: 14px;
+  }
+
+  div.how-to li {
+    font-size: 12px;
+  }
+
+  .read-me {
+    border: 1px solid white;
+    margin-left: 135px;
+  }
+
+  .navbar-custom {
+    background-color: #E0FBFC;
+  }
+
+  .jumbotron-custom {
+    background-color: #ADC5D2;
+  }
+
+  body {
+    background-color: #D2E4EE;
+  }

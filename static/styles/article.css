@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(240, 196, 142);
+    font-size: 18px;
+}
+
+code {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+blockquote {
+    background-color: bisque;
+}

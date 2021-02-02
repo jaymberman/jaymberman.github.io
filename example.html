@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Example</title>
+
+    <link rel="stylesheet" type="text/css" href="/home/jared/web_dev/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="example.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="/home/jared/web_dev/bootstrap/js/bootstrap.bundle.js" defer></script>
+    <script src="test.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div>
+        <ul class="navbar navbar-nav">
+          <li>
+            <button type="button" class="btn btn-info btn-md about-me" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true"
+            data-content="My interest in data science and engineering began while studying in college. I am passionate about collaborating to engineer technical
+             solutions for business problems and transformations. Enthusiactic about delivering valuable products through an 
+             agile workflow, and positioning for future success by using well-documented, reproducable methodologies, 
+             following best practices, and using proper workflow and code management. <br>
+             <a href='static/resume.pdf' download>Resume</a>">
+            About Me
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item" style="margin-right: 5px;">
+                <a class="btn btn-success btn-md" href="http://github.com/jaymberman">
+                  GitHub
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary btn-md" href="http://linkedin.com/in/jared-berman">
+                LinkedIn
+              </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid jumbotron-custom rounded">
+        <h1 class="display-4" style="margin-top: 10px;">
+          <img class="rounded-circle" src="static/portrait.jpeg" width="120" height="140" loading="lazy">
+          Jared <span id="lastname">Berman</span>
+          <small class="text-muted"> Data Scientist</small>
+        </h1>
+        <hr>
+        <p class="lead">My website for tech-, programming- and data science-related blogging, projects, and other neat stuff.</p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 how-to">
+          <h1> Download, installation, and set-up of P4Merge as the default
+            diff- and merge-tool for Git. <a href="articles/p4merge.html">Read</a> 
+          </h1>
+          <hr>
+          <p>
+            Direct inspection in the terminal or a basic text editor of files marked up by git is not always optimal. Here is
+            a free, no-frills GUI tool to inspect differences and settle merge conflicts. <br>
+          </p>
+          <h6> Prerequisites </h6>
+          <ol>
+            <li>Ubuntu (or a similar platform)</li>
+            <li>Familiarity with Git</li>
+            <li>5 minutes</li>
+          </ol>
+          <span style="font-size: 12px;">
+            (Bonus: I've also compiled a pdf giving a brief overview of git along with guides for many of the most salient utilities: difference
+            inspection, merging, branching, tagging, pull requests, and more. <a href="static/git_guide.pdf" download>View PDF</a>)</span>
+        </div>
+        <div class="col-md-6 how-to">
+          <h1>WIP</h1>
+          <hr>
+          <p>
+            -
+          </p>
+          <h6> Prerequisites </h6>
+          <ol>
+            <li>-</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Bootstrap is the most forked and starred repo on GitHub. All is it
+is a css and a js file (and some extra stuff to be exact) that can
+be used for styling and for actions on a page. Many many different types
+of widgets are implemented by Bootstrap. Use it as you would any open
+source api. Documentation here:
+https://getbootstrap.com/docs/4.5/components/alerts/ -->
